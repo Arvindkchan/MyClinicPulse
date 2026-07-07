@@ -1,0 +1,69 @@
+
+:root{
+  --ink:#102033;
+  --muted:#64748b;
+  --bg:#f7fbfc;
+  --card:#ffffff;
+  --teal:#0f766e;
+  --blue:#2563eb;
+  --aqua:#14b8a6;
+  --line:#dbeafe;
+  --shadow:0 24px 60px rgba(15, 118, 110, .14);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f8ffff 0%,#f6f9ff 100%);line-height:1.6}
+a{color:inherit}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:18px 7%;border-bottom:1px solid #e2e8f0}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none;font-weight:800;font-size:22px;color:var(--teal)}
+.brand img{width:42px;height:42px}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;color:#334155;font-weight:650}
+.nav-cta{background:var(--teal);color:white!important;padding:10px 16px;border-radius:999px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;padding:90px 7% 70px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--teal);font-size:13px;font-weight:800;margin-bottom:12px}
+h1{font-size:58px;line-height:1.02;margin:0 0 22px;letter-spacing:-.045em}
+h2{font-size:36px;line-height:1.15;margin:0 0 18px;letter-spacing:-.03em}
+h3{font-size:22px;margin:0 0 10px}
+p{color:var(--muted);font-size:17px}
+.lead{font-size:21px;max-width:760px}
+.actions{display:flex;gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;text-decoration:none;border:0;font-weight:800;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--teal),var(--blue));color:white;box-shadow:var(--shadow)}
+.btn.secondary{border:1px solid #cbd5e1;background:white;color:var(--ink)}
+.hero-card,.card,.contact-card,.form{background:var(--card);border:1px solid #e2e8f0;border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.pulse-line{height:80px;border-radius:20px;background:linear-gradient(90deg,#dbeafe,#ccfbf1);position:relative;margin-bottom:24px;overflow:hidden}
+.pulse-line:after{content:"";position:absolute;left:20px;right:20px;top:40px;border-top:4px solid var(--teal);filter:drop-shadow(0 0 8px rgba(20,184,166,.5));clip-path:polygon(0 50%,12% 50%,17% 18%,23% 82%,30% 50%,46% 50%,52% 28%,58% 72%,64% 50%,100% 50%)}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.metric-grid div{background:#f8fafc;border-radius:18px;padding:16px}
+.metric-grid strong{display:block;color:var(--teal)}
+.metric-grid span{font-size:13px;color:var(--muted)}
+.section{padding:72px 7%}
+.section-header{max-width:850px;margin-bottom:34px}
+.cards{display:grid;gap:22px}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.card{transition:.2s transform}
+.card:hover{transform:translateY(-4px)}
+.band{margin:40px 7% 80px;padding:46px;border-radius:32px;background:linear-gradient(135deg,#0f766e,#2563eb);color:white;text-align:center}
+.band p,.band h2{color:white}
+.page-hero{padding:76px 7% 42px;background:radial-gradient(circle at top right,#ccfbf1,transparent 36%),radial-gradient(circle at top left,#dbeafe,transparent 38%)}
+.page-hero p{max-width:850px;font-size:21px}
+.narrow{max-width:850px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.timeline div{background:white;border:1px solid #e2e8f0;border-radius:24px;padding:24px}
+.timeline span{display:inline-flex;width:42px;height:42px;border-radius:50%;align-items:center;justify-content:center;background:#ccfbf1;color:var(--teal);font-weight:900;margin-bottom:16px}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+.form{display:grid;gap:16px}
+label{font-weight:750;color:#334155}
+input,textarea{width:100%;border:1px solid #cbd5e1;border-radius:14px;padding:13px;margin-top:6px;font:inherit}
+textarea{min-height:120px}
+.footer{display:flex;justify-content:space-between;align-items:center;padding:32px 7%;background:#0f172a;color:white}
+.footer p{margin:4px 0 0;color:#cbd5e1}
+.footer-links{display:flex;gap:18px}
+.footer a{color:white;text-decoration:none}
+@media(max-width:900px){
+  .hero,.contact-grid{grid-template-columns:1fr}
+  .cards.three,.cards.two,.timeline{grid-template-columns:1fr}
+  h1{font-size:42px}
+  nav{display:none}
+}
